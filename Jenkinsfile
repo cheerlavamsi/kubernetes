@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Code Checkout: SCM') {
             steps {
-                echo 'Hello World'
+                git credentialsId: 'git_credentials', url: 'https://github.com/cheerlavamsi/kubernetes.git'
             }
         }
     }
