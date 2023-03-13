@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Code Checkout: SCM') {
             steps {
-                git credentialsId: 'Git_Access', url: 'https://github.com/cheerlavamsi/kubernetes.git'
+                git branch: 'main', credentialsId: 'Git_Access', url: 'https://github.com/cheerlavamsi/kubernetes.git'
             }
         }
         
