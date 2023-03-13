@@ -7,6 +7,13 @@ pipeline {
                 git credentialsId: 'Git_Access', url: 'https://github.com/cheerlavamsi/kubernetes.git'
             }
         }
+        
+	stage('Build') {
+
+	echo 'hello'
+
+	{
+
     }
 }
 
