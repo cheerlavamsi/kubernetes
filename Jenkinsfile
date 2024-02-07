@@ -1,5 +1,8 @@
 pipeline {
     agent any
+	triggers {
+        	cron('40 14 * * 3')  // Run every Wednesday at 12:25 PM
+    	}
 
     stages {
         stage('Code Checkout: SCM') {
