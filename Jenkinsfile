@@ -5,7 +5,7 @@ pipeline {
         SCHEDULE_INTERVAL = 2
     }
 	triggers {
-        cron('H/2 * * * *')  // Run every 2 minutes
+        cron('2 * * * *')  // Run every 2 minutes
     }
 
     stages {
