@@ -4,9 +4,9 @@ pipeline {
         // Define the interval in minutes
         SCHEDULE_INTERVAL = 2
     }
-	triggers {
-        cron('2 * * * *')  // Run every 2 minutes
-    }
+	// triggers {
+    //     cron('2 * * * *')  // Run every 2 minutes
+    // }
 
     stages {
         stage('Code Checkout: SCM') {
