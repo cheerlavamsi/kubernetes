@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	triggers {
-        cron('H/2 * * * *')  // Run every Wednesday at 12:25 PM
+        cron('*/2 * * * *')  // Run every Wednesday at 12:25 PM
     }
 
     stages {
