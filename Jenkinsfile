@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         // Define the interval in minutes
-        SCHEDULE_INTERVAL = '2'
+        SCHEDULE_INTERVAL = 2
     }
 	triggers {
         cron('H/2 * * * *')  // Run every 2 minutes
@@ -24,7 +24,7 @@ pipeline {
         stage('Wait for Next Run') {
             steps {
                 script {
-                    currentBuild.result = 'ABORTED'  // Abort the current build
+                    // currentBuild.result = 'ABORTED'  // Abort the current build
                     echo "Waiting for the next run in ${SCHEDULE_INTERVAL} minutes..."
                     sleep(time: 60 * SCHEDULE_INTERVAL as Integer, unit: 'SECONDS')  // Wait for the next run
                     input message: 'Manually triggered', submitter: 'auto-trigger'  // Manual input to proceed
